@@ -15,6 +15,6 @@ EOF
 vpc_security_group_ids = [aws_security_group.maheshSG.id]
 #iam_instance_profile = "mahesh-user"
  tags = {
-   "Name"= "maheshec2"
+  "Name"= "maheshec2"
  }
 }
