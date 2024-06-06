@@ -11,6 +11,9 @@ resource "aws_subnet" "maheshpublicsubnet" {
   vpc_id = aws_vpc.maheshvpc.id
   availability_zone = "ap-south-1a"
   map_public_ip_on_launch = true
+  tags = {
+    "Name" = "Mahesh Public Subnet"
+  }
 }
 #Create a Internet Gate Way
 resource "aws_internet_gateway" "maheshIGW" {
@@ -38,6 +41,9 @@ resource "aws_security_group" "maheshSG" {
   name = "maheshSG"
   description = "Mahesh Security Group"
   vpc_id = aws_vpc.maheshvpc.id
+  tags = {
+    "Name" = "Mahesh Security Group"
+  }
 
   #specify Inbound Rule for port 22
   ingress {
