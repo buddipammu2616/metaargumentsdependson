@@ -47,7 +47,6 @@ resource "aws_security_group" "maheshSG" {
   tags = {
     "Name" = "Mahesh Security Group"
   }
-
   #specify Inbound Rule for port 22
   ingress {
     description      = "Allow port 22"
