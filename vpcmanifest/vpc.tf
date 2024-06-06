@@ -18,11 +18,14 @@ resource "aws_subnet" "maheshpublicsubnet" {
 #Create a Internet Gate Way
 resource "aws_internet_gateway" "maheshIGW" {
   vpc_id = aws_vpc.maheshvpc.id
+  tags = {
+    "Name" = "Mahesh Internet Gateway"
+  }
 }#Create a Route Table
 resource "aws_route_table" "maheshRT" {
   vpc_id = aws_vpc.maheshvpc.id
   tags = {
-    "Name" = "Mahesh Internet Gateway"
+    "Name" = "Mahesh Route Table"
   }
 }
 #Create a Route in Route Table for Internet Access
