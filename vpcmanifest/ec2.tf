@@ -13,6 +13,7 @@ sudo systemctl enable httpd
 echo "<h1> Hi MAHESH </h1>" > /var/www/html/index.html
 EOF
 vpc_security_group_ids = [aws_security_group.maheshSG]
+iam_instance_profile = "mahesh-user"
  tags = {
    "Name"= "maheshec2"
  }
