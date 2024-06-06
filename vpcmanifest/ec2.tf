@@ -6,4 +6,7 @@ resource "aws_instance" "maheshec2" {
   subnet_id = aws_subnet.maheshpublicsubnet.id
   vpc_security_group_ids = [aws_security_group.maheshSG.id]
   user_data = file("apache-install.sh")
+  tags = {
+    "Name" = "maheshec2"
+  }
 }
